@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>签到玩转比财</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1,minimum-scale=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="x-ua-compitable" content="ie=edge">
+    <link rel="icon" href="./static/bicai.png" type="image/png">
+    <script>
+        window.h5_closeState = () => { }
+        window.pageAppear = () => { }
+    </script>
+</head>
+
+<body>
+    <!-- <div id="appLoading">
+    <img src="./static/img/loadings.gif" alt="loading" />
+  </div> -->
+    <section id="app"></section>
+
+    <script>
+            ; (function () {
+                var src = '//cdn.bootcss.com/eruda/1.5.2/eruda.min.js';
+                if (!/dev=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
+                document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+                document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
+            })();
+    </script>
+</body>
+
+</html>

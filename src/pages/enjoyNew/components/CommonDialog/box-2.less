@@ -1,0 +1,89 @@
+.box2 {
+  width: 634px;
+  height: 704px;
+  background: url("../../assets/images/dialog2.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 50px 50px 0px 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .head {
+    height: 160px;
+
+    .title {
+      font-size: 38px;
+    }
+
+    .desc {
+      margin-top: 10px;
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .main {
+    height: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #e74e17;
+    font-size: 54px;
+    // font-family: "has_buy";
+    font-weight: 600;
+  }
+
+  .footer {
+    flex: 1;
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      width: 430px;
+      border-radius: 500px;
+      box-shadow: 0px 6px 0px 0px #f4a43d;
+      height: 95px;
+      color: #ea1506;
+      font-weight: 600;
+      background: -webkit-linear-gradient(
+        to bottom right,
+        #ffedb7,
+        #fdda70
+      ); /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(
+        to bottom right,
+        #ffedb7,
+        #fdda70
+      ); /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(
+        to bottom right,
+        #ffedb7,
+        #fdda70
+      ); /* Firefox 3.6 - 15 */
+      background: linear-gradient(
+        to bottom right,
+        #ffedb7,
+        #fdda70
+      ); /* 标准的语法（必须放在最后） */
+    }
+
+    .link {
+      flex: 1;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      //   margin-top: 60px;
+      //   text-decoration: underline;
+    }
+  }
+}

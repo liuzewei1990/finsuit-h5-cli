@@ -1,0 +1,159 @@
+[v-cloak] {
+    display: none !important;
+}
+
+/* 清除默认样式 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+dt,
+dd,
+input,
+textarea {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding-top: constant(safe-area-inset-top);
+    padding-left: constant(safe-area-inset-left);
+    padding-right: constant(safe-area-inset-right);
+    padding-bottom: constant(safe-area-inset-bottom);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+img {
+    vertical-align: top;
+    border: none;
+}
+
+div,
+input,
+textarea {
+    border: none;
+    outline: none;
+    background: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+textarea {
+    resize: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 0.24rem;
+}
+
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+i {
+    font-style: normal;
+}
+
+/* 以下是字体和css公共设置 */
+@font-face {  
+    font-family: has_buy;  
+    src: url('./ziti.ttf'); 
+    font-weight: normal;  
+    font-style: normal;  
+}
+@font-face {  
+    font-family: pin_fang;  
+    src: url('./pinfang.ttf'); 
+    font-weight: normal;  
+    font-style: normal;  
+}
+html {
+    font-family:  "PingFangSC-Medium", "PingFangSC-Semibold;" "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* background-color: #ccc; */
+    position: relative;
+    /* background: url('../src/assets/financialFestival/1218tou.gif') */
+}
+
+.swiper-pagination-bullet {
+    width: 70px;
+    height: 5px;
+    border-radius: 0;
+}
+
+#entry {
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    position: relative;
+}
+
+#entryAdv {
+    display: none;
+}
+
+
+
+.transform-translate-xy {
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}

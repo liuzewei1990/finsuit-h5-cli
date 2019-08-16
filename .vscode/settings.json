@@ -1,0 +1,60 @@
+{
+    // 窗口失去焦点自动保存
+    // "files.autoSave": "onFocusChange",
+    // 编辑粘贴自动格式化
+    "editor.formatOnPaste": true,
+    // 控制字体系列。
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    // 字体大小
+    "editor.fontSize": 12,
+    // 行高
+    "editor.lineHeight": 20,
+    // 通过使用鼠标滚轮同时按住 Ctrl 可缩放编辑器的字体
+    "editor.mouseWheelZoom": true,
+    // 行太长自动换行
+    // "editor.wordWrap": "on",
+    // "editor.wordWrapColumn": 180,
+    // "workbench.iconTheme": "vs-seti",
+    // eslint设置
+    // "eslint.validate": [
+    // "javascript",
+    // "javascriptreact",
+    // "html",
+    // "vue",
+    // {
+    // "language": "vue",
+    "autoFix": true,
+    // }
+    // ],
+    // 保存自动修复
+    "eslint.autoFixOnSave": true,
+    // tab锁紧
+    "editor.tabSize": 4,
+    //因为vscode默认启用了根据文件类型自动设置tabsize的选项，在设置中添加
+    "editor.detectIndentation": false,
+    // 保存自动化
+    "editor.formatOnSave": true,
+    // 空格变成......
+    // "editor.renderWhitespace": "all",
+    // "window.zoomLevel": 0,
+    // "editor.formatOnSave": true,
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_attributes": "auto" //强制换行
+        }
+    },
+    "vetur.format.defaultFormatter.js": "vscode-typescript",
+    // "workbench.colorTheme": "Monokai",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "search.location": "sidebar",
+    // Specifies the location of snippets in the suggestion widget
+    "editor.snippetSuggestions": "top",
+    // Controls whether format on paste is on or off
+    "editor.formatOnPaste": true
+}

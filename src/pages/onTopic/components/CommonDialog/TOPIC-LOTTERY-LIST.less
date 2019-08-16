@@ -1,0 +1,85 @@
+.TOPIC-LOTTERY-LIST{
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+
+    min-height: 594px;
+    height: 100%;
+    flex-direction: column;
+    flex: 1;
+    h5{
+        font-size: 36px;
+        margin: 10px 0;
+    }
+
+    p{
+        color: #EB5F48;
+        font-size: 26px;
+    }
+
+    .lottery-list{
+        margin: 50px 0;
+        display: flex;
+        // background:radial-gradient(40px at right bottom,transparent 50%,#1889F6 50%);
+
+        .lottery-item{
+            
+            // min-height: 228px;
+            flex: 1;
+            width: 150px;
+            margin: 0 10px;
+        }
+
+        .coupon-title{
+            color: #864600;
+            font-size: 24px;
+            margin: 30px 0 5px;
+        }
+
+        .coupon-content{
+            color: #864600;
+            font-size: 24px;
+            display: block;
+            // display: flex;
+        }
+
+        .coupon-btn{
+            font-size: 22px;
+            line-height: 40px;
+            color: #fff;
+            width: 60%;
+            padding: 0;
+            margin: 30px auto 20px;
+            background: linear-gradient(to bottom right, #FE621D , #F12C21);
+            border-radius: 500px;
+            &:not(.weui-btn_disabled):visited {
+                color:#FFFFFF;
+            }
+            &:not(.weui-btn_disabled):active {
+                color: rgba(255,255,255,.6);
+                background-color: #fe8252;
+            }
+        }
+    }
+
+    .linkTxt{
+        font-size: 28px;
+        color: #3887FE;
+        // padding: 10px;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        &::after{
+            content: "";
+            display: block;
+            width: 30px;
+            height: 24px;
+            background: url("./arrow.png") no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            right: -35px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
