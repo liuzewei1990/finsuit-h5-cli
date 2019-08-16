@@ -7,19 +7,16 @@ function resolve (dir) {
     return path.join(__dirname, '..', dir)
 }
 
-const entrys = utils.entries();
-console.log("多页面入口:", entrys);
 
 
 const webpackConfig = {
     context: path.resolve(__dirname, '../'),
-    entry: entrys,
     output: {
         path: config.build.assetsRoot,
         filename: '[name].js',
-        publicPath: process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'productionTest'
-            ? config.build.assetsPublicPath
-            : config.dev.assetsPublicPath
+        // publicPath: process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'productionTest'
+        //     ? config.build.assetsPublicPath
+        //     : config.dev.assetsPublicPath
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],

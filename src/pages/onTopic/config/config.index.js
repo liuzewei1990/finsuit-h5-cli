@@ -36,7 +36,7 @@ const CONFIG = {
         actityCode: "ANSWER_ACTIVITY",
         // api host
         baseUrlHost: (window.location.protocol + '//' + window.location.host),
-        baseUrlHost: "https://adv2.bicai365.com",
+        baseUrlHost: "https://app-test1.bicai365.com",
         // api path
         baseUrlPath: "/finsuit/finsuitPhone/deal",
         // 阿里云静态文件地址

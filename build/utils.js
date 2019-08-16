@@ -130,6 +130,16 @@ exports.entries = function () {
     return map
 }
 
+exports.htmlPluginPath = function (currBuildPackName) {
+    const entryHtml = glob.sync(PAGE_PATH + '/*/*.html')
+    const reg = new RegExp(currBuildPackName);
+    let resPath = "";
+    entryHtml.forEach((filePath) => {
+        if (reg.test(filePath)) resPath = filePath;
+    })
+    return resPath;
+}
+
 //多页面输出配置
 exports.htmlPlugin = function () {
     const entryHtml = glob.sync(PAGE_PATH + '/*/*.html')

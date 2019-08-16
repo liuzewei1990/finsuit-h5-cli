@@ -33,7 +33,7 @@ const CONFIG = {
         actityCode: "SINGINF",
         // api host
         baseUrlHost: (window.location.protocol + '//' + window.location.host),
-        baseUrlHost: "https://adv2.bicai365.com",
+        baseUrlHost: "https://finsuit.bicai365.com",
         // api path
         baseUrlPath: "/finsuit/finsuitPhone/deal",
         // 阿里云静态文件地址

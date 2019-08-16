@@ -13,6 +13,21 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const env = require('../config/prod.env')
 
+const entries = utils.entries();
+const currBuildPackName = JSON.parse(process.env.npm_config_argv).remain[0];
+console.log("当前包命令：", currBuildPackName);
+if (!currBuildPackName) {
+    throw new Error("请指定打包的项目名称 例如：npm run build name");
+}
+const currBuildPackEntry = {}
+currBuildPackEntry[currBuildPackName] = entries[currBuildPackName];
+console.log("当前包——入口js：", currBuildPackEntry);
+const currHtmlPluginPath = utils.htmlPluginPath(currBuildPackName);
+console.log("当前包——入口html：", currHtmlPluginPath);
+const publicPath = `/${currBuildPackName}/`;
+console.log("当前包——服务器发布目录：", publicPath);
+
+
 const webpackConfig = merge(baseWebpackConfig, {
     module: {
         rules: utils.styleLoaders({
@@ -22,10 +37,13 @@ const webpackConfig = merge(baseWebpackConfig, {
         })
     },
     devtool: config.build.productionSourceMap ? config.build.devtool : false,
+    entry: currBuildPackEntry,
     output: {
-        path: config.build.assetsRoot,
+        // path: config.build.assetsRoot,
+        path: config.build.assetsRoot + "/" + currBuildPackName,
         filename: utils.assetsPath('js/[name].[chunkhash].js'),
-        chunkFilename: utils.assetsPath('js/[name].[chunkhash].js')
+        chunkFilename: utils.assetsPath('js/[name].[chunkhash].js'),
+        publicPath: publicPath
     },
     plugins: [
         // http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -60,20 +78,20 @@ const webpackConfig = merge(baseWebpackConfig, {
         // generate dist index.html with correct asset hash for caching.
         // you can customize output by editing /index.html
         // see https://github.com/ampedandwired/html-webpack-plugin
-        // new HtmlWebpackPlugin({
-        //     filename: config.build.index,
-        //     template: 'index.html',
-        //     inject: true,
-        //     minify: {
-        //         removeComments: true,
-        //         collapseWhitespace: true,
-        //         removeAttributeQuotes: true
-        //         // more options:
-        //         // https://github.com/kangax/html-minifier#options-quick-reference
-        //     },
-        //     // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-        //     chunksSortMode: 'dependency'
-        // }),
+        new HtmlWebpackPlugin({
+            filename: path.resolve(__dirname, `../dist/${currBuildPackName}/index.html`),
+            template: currHtmlPluginPath,
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: true
+                // more options:
+                // https://github.com/kangax/html-minifier#options-quick-reference
+            },
+            // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+            chunksSortMode: 'dependency'
+        }),
         // keep module.id stable when vendor modules does not change
         new webpack.HashedModuleIdsPlugin(),
         // enable scope hoisting
@@ -116,8 +134,9 @@ const webpackConfig = merge(baseWebpackConfig, {
                 ignore: ['.*']
             }
         ])
-    ].concat(utils.htmlPlugin())
+    ]
 })
+
 
 if (config.build.productionGzip) {
     const CompressionWebpackPlugin = require('compression-webpack-plugin')
