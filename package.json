@@ -7,8 +7,9 @@
     "scripts": {
         "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --host 0.0.0.0",
         "start": "npm run dev",
-        "build": "node build/build.js",
-        "build-test": "node build/build-test.js"
+        "build:prd": "node build/build.js",
+        "build:test": "node build/build-test.js",
+        "build:common": "node build/build-common.js"
     },
     "dependencies": {
         "axios": "^0.15.3",

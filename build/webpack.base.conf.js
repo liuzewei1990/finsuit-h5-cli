@@ -30,6 +30,7 @@ const webpackConfig = {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
             '@src': resolve('src'),
+            '@common': resolve('src/common'),
             // '@src': resolve('src/pages/onTopic'),
             '@css': resolve('src/assets/css'),
             ...utils.getAlias()
