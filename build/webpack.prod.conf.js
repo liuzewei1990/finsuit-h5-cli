@@ -84,7 +84,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         // you can customize output by editing /index.html
         // see https://github.com/ampedandwired/html-webpack-plugin
         new HtmlWebpackPlugin({
-            title: "123456",
+            buildDate: utils.getBuildTime(),
             filename: path.resolve(__dirname, `../dist/${currBuildPackName}/index.html`),
             template: currHtmlPluginPath,
             inject: true,

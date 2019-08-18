@@ -50,6 +50,4 @@ const CONFIG = {
         aliyuncHost: "https://finsuit.oss-cn-beijing.aliyuncs.com/"
     }
 }
-console.warn("当前H5版本:", CONFIG.v);
-console.warn("当前环境变量：", process.env.NODE_ENV);
 export default CONFIG[process.env.NODE_ENV];

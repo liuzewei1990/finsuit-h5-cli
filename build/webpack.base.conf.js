@@ -71,6 +71,10 @@ const webpackConfig = {
                     limit: 10000,
                     name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
+            },
+            {
+                test: /\.html$/,
+                use: ['ejs-loader', 'extract-loader', 'html-loader']
             }
         ]
     },
