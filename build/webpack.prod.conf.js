@@ -10,6 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const ScriptToHtmlWebpackPlugin = require('./scriptToHtmlWebpackPlugin.js')
 
 const env = require('../config/prod.env')
 
@@ -83,6 +84,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         // you can customize output by editing /index.html
         // see https://github.com/ampedandwired/html-webpack-plugin
         new HtmlWebpackPlugin({
+            title: "123456",
             filename: path.resolve(__dirname, `../dist/${currBuildPackName}/index.html`),
             template: currHtmlPluginPath,
             inject: true,
@@ -95,6 +97,15 @@ const webpackConfig = merge(baseWebpackConfig, {
             },
             // necessary to consistently work with multiple chunks via CommonsChunkPlugin
             chunksSortMode: 'dependency'
+        }),
+
+        new ScriptToHtmlWebpackPlugin({
+            paths: [
+                "https://cdn.bootcss.com/vue/2.6.10/vue.min.js",
+                "https://cdn.bootcss.com/vue-router/3.1.2/vue-router.min.js",
+                "https://cdn.bootcss.com/vuex/3.1.1/vuex.min.js",
+                "https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"
+            ]
         }),
         // keep module.id stable when vendor modules does not change
         new webpack.HashedModuleIdsPlugin(),
