@@ -22,6 +22,10 @@ if (!currBuildPackName) {
 const currBuildPackEntry = {}
 currBuildPackEntry[currBuildPackName] = entries[currBuildPackName];
 console.log("当前包——入口js：", currBuildPackEntry);
+if (!currBuildPackEntry[currBuildPackName]) {
+    throw new Error(`没有找到【${currBuildPackName}】项目 请检查项目名称是否正确`);
+}
+
 const currHtmlPluginPath = utils.htmlPluginPath(currBuildPackName);
 console.log("当前包——入口html：", currHtmlPluginPath);
 const publicPath = `/${currBuildPackName}/`;

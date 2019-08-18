@@ -18,7 +18,7 @@ export default new Router({
         // {
         //     name: "shareLink",
         //     path: "/shareLink",
-        //     component: () => import(/* webpackChunkName: "shareLink" */ '@onTopic/view/shareLink/index.vue'),
+        //     component: () => import(/* webpackChunkName: "shareLink" */ '@template/view/shareLink/index.vue'),
         //     meta: { title: '每日一题', requiresAuth: false, keepAlive: false },
         // },
 

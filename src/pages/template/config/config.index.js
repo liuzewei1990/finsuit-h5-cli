@@ -20,13 +20,7 @@ const CONFIG = {
         baseUrlPath: "/finsuitPhone/deal",
         baseUrlPath: "/finsuit/finsuitPhone/deal",
         // 阿里云静态文件地址
-        aliyuncHost: "https://finsuit-test.oss-cn-beijing.aliyuncs.com/",
-        // 分享link配置
-        shareTitle: "",
-        shareDesc: "",
-        shareLink: "",
-        shareImgurl: "",
-        appDownloadUrl: "http://a.app.qq.com/o/simple.jsp?pkgname=com.bs.finance&from=singlemessage"
+        aliyuncHost: "https://finsuit-test.oss-cn-beijing.aliyuncs.com/"
     },
 
     //测试环境配置
@@ -40,13 +34,7 @@ const CONFIG = {
         // api path
         baseUrlPath: "/finsuit/finsuitPhone/deal",
         // 阿里云静态文件地址
-        aliyuncHost: "https://finsuit-test.oss-cn-beijing.aliyuncs.com/",
-        // 分享link配置
-        shareTitle: "",
-        shareDesc: "",
-        shareLink: "",
-        shareImgurl: "",
-        appDownloadUrl: "http://a.app.qq.com/o/simple.jsp?pkgname=com.bs.finance&from=singlemessage"
+        aliyuncHost: "https://finsuit-test.oss-cn-beijing.aliyuncs.com/"
     },
 
     //生产环境配置
@@ -59,13 +47,7 @@ const CONFIG = {
         // api path
         baseUrlPath: "/finsuit/finsuitPhone/deal",
         // 阿里云静态文件地址
-        aliyuncHost: "https://finsuit.oss-cn-beijing.aliyuncs.com/",
-        // 分享link配置
-        shareTitle: "",
-        shareDesc: "",
-        shareLink: "",
-        shareImgurl: "",
-        appDownloadUrl: "http://a.app.qq.com/o/simple.jsp?pkgname=com.bs.finance&from=singlemessage"
+        aliyuncHost: "https://finsuit.oss-cn-beijing.aliyuncs.com/"
     }
 }
 console.warn("当前H5版本:", CONFIG.v);

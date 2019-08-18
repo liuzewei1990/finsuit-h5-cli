@@ -1,5 +1,5 @@
 
-import router from "@onTopic/router"
+import router from "@template/router"
 
 router.beforeEach((to, from, next) => {
     if (to.meta.title) {

@@ -26,6 +26,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     // these devServer options should be customized in /config/index.js
     devServer: {
         clientLogLevel: 'warning',
+        index: path.join(config.dev.assetsPublicPath, 'template.html'),
         historyApiFallback: {
             rewrites: [
                 { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
@@ -86,7 +87,7 @@ module.exports = new Promise((resolve, reject) => {
             // Add FriendlyErrorsPlugin
             devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
                 compilationSuccessInfo: {
-                    messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+                    messages: [`开发环境全部已启动 在浏览器中输入对应的项目文件预览吧 例如: http://${devWebpackConfig.devServer.host}:${port}/template.html`],
                 },
                 onErrors: config.dev.notifyOnErrors
                     ? utils.createNotifierCallback()

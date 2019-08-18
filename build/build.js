@@ -12,10 +12,11 @@ const config = require('../config')
 const webpackConfig = require('./webpack.prod.conf')
 
 const currBuildPackName = JSON.parse(process.env.npm_config_argv).remain[0];
+
 const spinner = ora(`正在进行【${currBuildPackName}】项目,【${process.env.NODE_ENV}】环境打包进行中`)
 spinner.start()
 
-rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
+rm(path.join(config.build.assetsRoot, currBuildPackName, config.build.assetsSubDirectory), err => {
     if (err) throw err
     webpack(webpackConfig, (err, stats) => {
         spinner.stop()
