@@ -83,11 +83,31 @@ npm run build:xxx [xxx] --report
         └─js
 ```
 -------------------
-### 上手指南
+
+### finsuit-h5插件包集成功能
+- this.$Toast()：提示框
+- this.$Loading("加载中")：加载loading
+- this.$iosAlert()：对话框
+- this.$bcBridge对象：原生sdk
+- this.$login():去登录
+- this.$checkLogin(): 按钮登录拦截器
+- this.$checkToLogin():按钮登录拦截器
+- this.$utils():工具包
+- this.$modalHelper():弹窗模态辅助器
+- this.$browser():浏览器和系统信息
+- this.$downloadApp():去下载app
+- this.$bootstrap():使用插件包挂载app，处理了用户登录
+
+-------------------
+
+### 新项目上手指南
 
 - 第一步：快速复制template项目集成包创建新的微项目，并启用新的名称，该名称也对应服务器部署目录名，也就是assetsPublicPath，例如：joyPage
 - 第二步：全局检索：@template 全部替换为 @joyPage（你的项目名称）  设置检索位置：template
 - 第三步：将新项目目录中的template.js 和 template.html 重命名 : joyPage
 - 第四步：npm run dev  浏览器输入http://0.0.0.0:7789/joyPage.html
 - 第五步：npm run build:pord joyPage 打包到dist文件夹中。
+
+### 老项目上手指南
+- 第一步：
 
