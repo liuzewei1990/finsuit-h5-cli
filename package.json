@@ -12,7 +12,7 @@
         "build:common": "node build/build-common.js"
     },
     "dependencies": {
-        "axios": "^0.15.3",
+        "axios": "^0.21.1",
         "fastclick": "^1.0.6",
         "h5plus-vue": "^1.0.0",
         "html2canvas": "^1.0.0-rc.3",
